@@ -12,4 +12,7 @@ x3 = st.slider('Select input3', 0.0, 10.0, 4.0)
 x4 = st.slider('Select input4', 0.0, 10.0, 7.0)
 
 X_new = np.array([x1, x2, x3, x4]).reshape(1, -1)
-model.predict(X_new)
+predict = model.predict(X_new)
+
+st.write("## Prediction Result:")
+st.write('Species:', predict[0])
